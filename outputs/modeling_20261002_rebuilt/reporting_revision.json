@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-02",
+  "scope": "Reporting only; no retraining/reselection",
+  "changes": [
+    "Use CV fold mean in assignment Train row",
+    "Add Batch3 gaps",
+    "Explicit gap formulas and units"
+  ],
+  "unchanged_artifact_sha256": {
+    "final_model.joblib": "5edb20ddc15c000685612bad69fc12a1cfbcd8864bde4e47d01e797138008e6c",
+    "selected_model.json": "33de421bd7f2c768a8909dae17fbeeaa50ca0e3775c764617aad7c2500c4a5a1",
+    "predictions.csv": "bd01eda44f6f356d0873cf97ae7f3ee89f4860209324ace6756619c66a1367de",
+    "config.json": "43edfb778fafd86414607236a48592d6b9e224d09e72c157b3374fe648c21b34",
+    "split_manifest.json": "2b524890dd946a7b27f0c2a0e8368cfeffd9d5c9c0bf14d714621d95a7030563",
+    "experiment_frozen.json": "11cf4589f09e87c05599d887ce8c81ba3d1fca1af61754e45607cf64d4978348",
+    "candidate_comparison.csv": "9bf92bcb2f512258cf029efb56eab939cac6214e60ad5d37f920b0ae90468e4d"
+  },
+  "reporting_source_sha256": "186757677018787b990fbd60790e536ff0eab329811b424ea1b62fa6ee923def",
+  "original_source_snapshot": "experiment_frozen.json retains original execution hashes"
+}

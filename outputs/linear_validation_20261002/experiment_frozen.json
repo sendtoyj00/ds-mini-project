@@ -1,0 +1,54 @@
+{
+  "selected": {
+    "candidate_id": "M3_raw_Ridge",
+    "feature_set": "M3",
+    "features": [
+      "log10_dq_var",
+      "peak_c_rate",
+      "switch_soc",
+      "qd_initial_median",
+      "qd_slope_10_100"
+    ],
+    "feature_count": 5,
+    "model": "Ridge",
+    "target": "raw",
+    "params": "{\"alpha\": 1.0}",
+    "cv_mape_mean": 8.134262832208663,
+    "cv_mape_std": 1.4726044767473419,
+    "cv_mae_mean": 72.28067191909432,
+    "cv_oof_mape": 8.09306772736515,
+    "cell_cv_mape_mean": 8.107190871125404,
+    "cell_cv_mape_std": 2.0135168254009486
+  },
+  "selection_sha256": "2ba96710d0911fe887c2d9e72021d1f3acce0b701462d8eba37c00db47ea71e4",
+  "final_model_sha256": "642ca45cf6a8f123322a17eda0106e0cdf397be9fbf94dab977093ddf43dee85",
+  "config_sha256": "c632c98be01442cf4bbe4c23817f5fc420dfb4f22734855d73e645585df6d092",
+  "split_sha256": "2b524890dd946a7b27f0c2a0e8368cfeffd9d5c9c0bf14d714621d95a7030563",
+  "source_sha256": {
+    "src/__init__.py": "244037573de5c93ae02a5eb1950c3a24c449b84b09dd7ace4bef8eb4d8c2e82c",
+    "src/data.py": "bbd642a1b707dbff2993067bd69916a203361c86c5192dffe82e1e1ac1bd0691",
+    "src/eda.py": "3397a3a757918346bb6694ece8b0da4bf7254ef7f9c8328f94a53b93e1432216",
+    "src/features.py": "17b414e4921163612f39db1d2e78f8411153c3373164436baf3feed5726552e7",
+    "src/modeling.py": "e07444284cb0fbb8f4edbe776261e51f7b112e43e174cda9262b4a62d5071161",
+    "src/preprocess.py": "9f8a70c5fc2e2e21f8441854049d94dafb0694d717ec013281b1766e03caf72e",
+    "src/reporting.py": "012d8395c8c7e40fef0f4393a9f1f67dd634b44fb8507b4542ef117287119be2",
+    "src/run_experiment.py": "ee7361344e3be6148bd032637bc0e6522a32e785704e7825d438d3e7106baf91",
+    "src/train.py": "9040d0eef2375514a2a0aa18f2eef868da95d9ecdc7fc1968c6b6b2a23c17710",
+    "src/verify_results.py": "5d2a2642fe9f51bf0e7fb4146472bf71f9713541ab26b49d15fd3eabeadf7ed4"
+  },
+  "data_sha256": {
+    "2017-05-12_batchdata_updated_struct_errorcorrect.mat": "9d928ab978f0e3c70b31cb833a749fedd35094d01af76475d69b40aa3497f5ba",
+    "2018-02-20_batchdata_updated_struct_errorcorrect.mat": "3487db505ad08b6c805f41dd0560e73b54077c76aca04f706f06e2356ccf7845",
+    "2018-04-12_batchdata_updated_struct_errorcorrect.mat": "62c30e413b63e6144720e016deed3661fac8468641794a5807b123fe84717998"
+  },
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.7.0",
+    "h5py": "3.16.0"
+  },
+  "external_target_used_for_selection": false,
+  "final_training_n": 46
+}

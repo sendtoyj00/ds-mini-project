@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": [
+    "unique IDs",
+    "aligned X/y",
+    "batch counts",
+    "36/10 disjoint split",
+    "cycle <=100",
+    "input allowlist",
+    "protocol group isolation",
+    "finite predictions",
+    "MAPE independently recomputed",
+    "log10 inverse roundtrip",
+    "saved model reload predictions",
+    "selection/model frozen before external evaluation"
+  ],
+  "selection_sha256": "2ba96710d0911fe887c2d9e72021d1f3acce0b701462d8eba37c00db47ea71e4",
+  "model_sha256": "642ca45cf6a8f123322a17eda0106e0cdf397be9fbf94dab977093ddf43dee85"
+}

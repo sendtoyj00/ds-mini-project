@@ -1,0 +1,47 @@
+{
+  "selected": {
+    "candidate_id": "M1_log10_RandomForest",
+    "feature_set": "M1",
+    "features": [
+      "log10_dq_var"
+    ],
+    "feature_count": 1,
+    "model": "RandomForest",
+    "target": "log10",
+    "params": "{\"max_depth\": 2, \"max_features\": 0.7, \"min_samples_leaf\": 3, \"n_estimators\": 100}",
+    "cv_mape_mean": 8.100103701305375,
+    "cv_mape_std": 3.214722250998648,
+    "cv_mae_mean": 68.116803233129,
+    "cv_oof_mape": 8.171985352154724,
+    "cell_cv_mape_mean": 8.483359358654269,
+    "cell_cv_mape_std": 3.20236195312436
+  },
+  "selection_sha256": "33de421bd7f2c768a8909dae17fbeeaa50ca0e3775c764617aad7c2500c4a5a1",
+  "final_model_sha256": "5edb20ddc15c000685612bad69fc12a1cfbcd8864bde4e47d01e797138008e6c",
+  "config_sha256": "43edfb778fafd86414607236a48592d6b9e224d09e72c157b3374fe648c21b34",
+  "split_sha256": "2b524890dd946a7b27f0c2a0e8368cfeffd9d5c9c0bf14d714621d95a7030563",
+  "source_sha256": {
+    "src/__init__.py": "244037573de5c93ae02a5eb1950c3a24c449b84b09dd7ace4bef8eb4d8c2e82c",
+    "src/data.py": "9f8a70c5fc2e2e21f8441854049d94dafb0694d717ec013281b1766e03caf72e",
+    "src/features.py": "17b414e4921163612f39db1d2e78f8411153c3373164436baf3feed5726552e7",
+    "src/modeling.py": "8c8dc01fb4b467c3569a0f6622e47356d8d495d2654c28da4fc34ab3f68d8429",
+    "src/reporting.py": "3944c9b61a4ac0d69602d822d6341ecbb84a88d24043961dc2093550ac203c06",
+    "src/run_experiment.py": "cebb7d2763b06213793f8c68aa31468f069a031372d6fb6197a34eb479f3f635",
+    "src/verify_results.py": "53bfc6ccd80547feaf9dcc4ab7b2a299e68beb3dfd954a7a150c41df446b8661"
+  },
+  "data_sha256": {
+    "2017-05-12_batchdata_updated_struct_errorcorrect.mat": "9d928ab978f0e3c70b31cb833a749fedd35094d01af76475d69b40aa3497f5ba",
+    "2018-02-20_batchdata_updated_struct_errorcorrect.mat": "3487db505ad08b6c805f41dd0560e73b54077c76aca04f706f06e2356ccf7845",
+    "2018-04-12_batchdata_updated_struct_errorcorrect.mat": "62c30e413b63e6144720e016deed3661fac8468641794a5807b123fe84717998"
+  },
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.7.0",
+    "h5py": "3.16.0"
+  },
+  "external_target_used_for_selection": false,
+  "final_training_n": 46
+}

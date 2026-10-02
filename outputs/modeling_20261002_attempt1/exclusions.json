@@ -1,0 +1,47 @@
+{
+  "excluded": [
+    {
+      "cell_id": "b2c22",
+      "reason": "missing_or_invalid_target"
+    },
+    {
+      "cell_id": "b2c23",
+      "reason": "missing_or_invalid_target"
+    },
+    {
+      "cell_id": "b2c35",
+      "reason": "missing_or_invalid_target"
+    },
+    {
+      "cell_id": "b2c36",
+      "reason": "missing_or_invalid_target"
+    },
+    {
+      "cell_id": "b2c37",
+      "reason": "missing_or_invalid_target"
+    },
+    {
+      "cell_id": "b2c38",
+      "reason": "missing_or_invalid_target"
+    },
+    {
+      "cell_id": "b2c39",
+      "reason": "missing_or_invalid_target"
+    },
+    {
+      "cell_id": "b2c40",
+      "reason": "missing_or_invalid_target"
+    },
+    {
+      "cell_id": "b3c23",
+      "reason": "missing_or_invalid_target"
+    },
+    {
+      "cell_id": "b3c32",
+      "reason": "missing_or_invalid_target"
+    }
+  ],
+  "out_of_cohort_files": [
+    "2018-04-03_varcharge_batchdata_updated_struct_errorcorrect.mat"
+  ]
+}

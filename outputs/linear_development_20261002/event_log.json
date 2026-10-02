@@ -1,0 +1,42 @@
+[
+  {
+    "event": "rules_frozen",
+    "utc": "2026-10-02T06:45:52.416433+00:00",
+    "config_sha256": "c632c98be01442cf4bbe4c23817f5fc420dfb4f22734855d73e645585df6d092"
+  },
+  {
+    "event": "features_prepared",
+    "utc": "2026-10-02T06:45:52.859236+00:00",
+    "core_missing_n": 0
+  },
+  {
+    "event": "candidate_frozen",
+    "utc": "2026-10-02T06:46:11.425399+00:00",
+    "selection_sha256": "2ba96710d0911fe887c2d9e72021d1f3acce0b701462d8eba37c00db47ea71e4",
+    "candidate_id": "M3_raw_Ridge"
+  },
+  {
+    "event": "valid_labels_evaluated",
+    "utc": "2026-10-02T06:47:34.316541+00:00",
+    "candidate_unchanged": true
+  },
+  {
+    "event": "final_model_frozen",
+    "utc": "2026-10-02T06:47:37.411383+00:00",
+    "model_sha256": "642ca45cf6a8f123322a17eda0106e0cdf397be9fbf94dab977093ddf43dee85"
+  },
+  {
+    "event": "external_labels_loaded",
+    "utc": "2026-10-02T06:47:37.415206+00:00",
+    "batch": 2
+  },
+  {
+    "event": "external_labels_loaded",
+    "utc": "2026-10-02T06:47:37.420047+00:00",
+    "batch": 3
+  },
+  {
+    "event": "reporting_complete",
+    "utc": "2026-10-02T06:47:38.165775+00:00"
+  }
+]

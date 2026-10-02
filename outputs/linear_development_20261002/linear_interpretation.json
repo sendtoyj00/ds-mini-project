@@ -1,0 +1,5 @@
+{
+  "target_scale": "raw",
+  "intercept_input_units": -6272.102968091694,
+  "interpretation": "Additive contributions are on log10(cycle_life) scale for log target; they are not causal effects."
+}

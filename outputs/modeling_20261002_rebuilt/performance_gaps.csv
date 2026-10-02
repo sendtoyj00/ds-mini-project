@@ -1,0 +1,6 @@
+gap,value_pp
+Valid - Train (CV fold mean),5.6922992273702615
+Test - Valid,17.51644995295247
+Batch2 - project goal,22.208852881628104
+Batch3 - Batch2,-18.408938904973216
+Batch3 - project goal,3.7999139766548904

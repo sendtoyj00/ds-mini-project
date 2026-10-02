@@ -1,0 +1,130 @@
+{
+  "seed": 42,
+  "valid_size": 10,
+  "cell_cv_folds": 5,
+  "group_cv_folds": 5,
+  "selection": "Extrapolating Linear/Ridge/ElasticNet candidates only; Group CV mean MAPE within 0.5 percentage points of best, then fewer features, lower fold std, complexity, mean MAPE, candidate ID; Valid once without reselection",
+  "tie_tolerance_percentage_points": 0.5,
+  "tie_order": [
+    "fewer features",
+    "lower Group CV fold std",
+    "Dummy",
+    "Ridge",
+    "ElasticNet",
+    "Linear",
+    "RandomForest",
+    "XGBoost",
+    "LightGBM",
+    "mean Group CV MAPE",
+    "candidate_id"
+  ],
+  "window": 100,
+  "voltage_grid": [
+    2.0,
+    3.5,
+    300
+  ],
+  "curve_valid_share": 0.95,
+  "curve_max_gap": 0.05,
+  "dq_variance_ddof": 1,
+  "capacity_rolling_window": 11,
+  "capacity_rolling_min_periods": 3,
+  "capacity_jump_relative": 0.02,
+  "capacity_initial_min_count": 1,
+  "capacity_slope_min_count": 2,
+  "imputer_empty_feature_fallback": 0,
+  "positive_prediction_clipping": false,
+  "log_target_bias_correction": false,
+  "parallelism": 1,
+  "grids": {
+    "Linear": {},
+    "Ridge": {
+      "alpha": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ]
+    },
+    "ElasticNet": {
+      "alpha": [
+        0.0001,
+        0.01,
+        1.0,
+        10.0
+      ],
+      "l1_ratio": [
+        0.2,
+        0.8
+      ]
+    },
+    "RandomForest": {
+      "n_estimators": [
+        100
+      ],
+      "max_depth": [
+        2,
+        3
+      ],
+      "min_samples_leaf": [
+        3,
+        5
+      ],
+      "max_features": [
+        0.7,
+        1.0
+      ]
+    },
+    "XGBoost": {
+      "n_estimators": [
+        60,
+        120
+      ],
+      "max_depth": [
+        1,
+        2
+      ],
+      "learning_rate": [
+        0.03
+      ],
+      "min_child_weight": [
+        5
+      ],
+      "reg_lambda": [
+        10.0,
+        30.0
+      ]
+    },
+    "LightGBM": {
+      "n_estimators": [
+        60,
+        120
+      ],
+      "max_depth": [
+        2
+      ],
+      "num_leaves": [
+        3,
+        4
+      ],
+      "learning_rate": [
+        0.03
+      ],
+      "min_child_samples": [
+        5,
+        10
+      ],
+      "reg_lambda": [
+        10.0
+      ]
+    }
+  },
+  "project_goal_mape_pct": 9.1,
+  "nested_cv": true,
+  "selection_models": [
+    "Linear",
+    "Ridge",
+    "ElasticNet"
+  ]
+}

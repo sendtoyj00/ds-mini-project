@@ -1,0 +1,21 @@
+{
+  "candidate_id": "M3_raw_Ridge",
+  "feature_set": "M3",
+  "features": [
+    "log10_dq_var",
+    "peak_c_rate",
+    "switch_soc",
+    "qd_initial_median",
+    "qd_slope_10_100"
+  ],
+  "feature_count": 5,
+  "model": "Ridge",
+  "target": "raw",
+  "params": "{\"alpha\": 1.0}",
+  "cv_mape_mean": 8.134262832208663,
+  "cv_mape_std": 1.4726044767473419,
+  "cv_mae_mean": 72.28067191909432,
+  "cv_oof_mape": 8.09306772736515,
+  "cell_cv_mape_mean": 8.107190871125404,
+  "cell_cv_mape_std": 2.0135168254009486
+}

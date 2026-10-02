@@ -1,0 +1,6 @@
+feature,standardized_coefficient,input_unit_coefficient,direction
+log10_dq_var,-143.29050109152152,-382.9088723095127,decreasing
+peak_c_rate,-47.47031751926429,-39.91012456130059,decreasing
+switch_soc,-41.36148418867944,-2.1487996008208414,decreasing
+qd_initial_median,42.11859370344958,5526.035223680425,increasing
+qd_slope_10_100,10.580051233995212,380634.5185094882,increasing

@@ -1,0 +1,10 @@
+index,value,unit,note
+Train (Batch 1 CV),8.100103701305375,%,Group CV fold mean; Train36
+Valid (Batch 1 Hold-out),13.792402928675637,%,Hold-out10; one evaluation
+Test (Batch 2),31.308852881628106,%,Final refit on Batch1 46; Test39
+Gap (Train-Valid),5.6922992273702615,%p,Valid - Train; positive: possible overfitting
+Gap (Valid-Test),17.51644995295247,%p,Batch2 - Valid; positive: generalization degradation
+"Gap (Target-Test), Batch2",22.208852881628104,%p,Batch2 - 9.1%; paper reference
+Test (Batch 3),12.89991397665489,%,Same final model; additional Test44
+Gap (Batch2-Batch3),-18.408938904973216,%p,Batch3 - Batch2; positive: Batch3 has higher error
+"Gap (Target-Test), Batch3",3.7999139766548904,%p,Batch3 - 9.1%; paper reference

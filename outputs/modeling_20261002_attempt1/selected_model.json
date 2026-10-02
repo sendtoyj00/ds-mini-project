@@ -1,0 +1,17 @@
+{
+  "candidate_id": "M1_log10_RandomForest",
+  "feature_set": "M1",
+  "features": [
+    "log10_dq_var"
+  ],
+  "feature_count": 1,
+  "model": "RandomForest",
+  "target": "log10",
+  "params": "{\"max_depth\": 2, \"max_features\": 0.7, \"min_samples_leaf\": 3, \"n_estimators\": 100}",
+  "cv_mape_mean": 8.100103701305375,
+  "cv_mape_std": 3.214722250998648,
+  "cv_mae_mean": 68.116803233129,
+  "cv_oof_mape": 8.171985352154724,
+  "cell_cv_mape_mean": 8.483359358654269,
+  "cell_cv_mape_std": 3.20236195312436
+}

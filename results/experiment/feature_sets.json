@@ -1,0 +1,43 @@
+{
+  "M0": [],
+  "M1": [
+    "log10_dq_var"
+  ],
+  "M2": [
+    "log10_dq_var",
+    "peak_c_rate",
+    "switch_soc"
+  ],
+  "M3": [
+    "log10_dq_var",
+    "peak_c_rate",
+    "switch_soc",
+    "qd_initial_median",
+    "qd_slope_10_100"
+  ],
+  "M4": [
+    "log10_dq_var",
+    "peak_c_rate",
+    "switch_soc",
+    "qd_initial_median",
+    "qd_slope_10_100",
+    "tavg_median_100",
+    "ir_median_100"
+  ],
+  "M3_clean": [
+    "log10_dq_var",
+    "peak_c_rate",
+    "switch_soc",
+    "qd_initial_median_clean",
+    "qd_slope_10_100_clean"
+  ],
+  "M4_clean": [
+    "log10_dq_var",
+    "peak_c_rate",
+    "switch_soc",
+    "qd_initial_median_clean",
+    "qd_slope_10_100_clean",
+    "tavg_median_100",
+    "ir_median_100"
+  ]
+}

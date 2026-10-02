@@ -1,0 +1,18 @@
+[
+  {
+    "event": "rules_frozen",
+    "utc": "2026-10-02T06:57:25.242231+00:00",
+    "config_sha256": "c632c98be01442cf4bbe4c23817f5fc420dfb4f22734855d73e645585df6d092"
+  },
+  {
+    "event": "features_prepared",
+    "utc": "2026-10-02T06:57:25.713727+00:00",
+    "core_missing_n": 0
+  },
+  {
+    "event": "candidate_frozen",
+    "utc": "2026-10-02T06:57:44.817602+00:00",
+    "selection_sha256": "2ba96710d0911fe887c2d9e72021d1f3acce0b701462d8eba37c00db47ea71e4",
+    "candidate_id": "M3_raw_Ridge"
+  }
+]

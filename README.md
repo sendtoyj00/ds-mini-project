@@ -66,11 +66,11 @@ jupyter lab
 
 ### Cycle Life 분포
 
-| Batch | 셀 수 | 평균 | 중앙값 | 범위 | 500 미만 | B1 수명 범위 밖 |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 | 46 | 844.7 | 858.5 | 534–1,227 | 0.0% | — |
-| 2 | 39 | 565.7 | 472.0 | 392–1,186 | 71.8% | 76.9% |
-| 3 | 44 | 1,059.7 | 1,005.5 | 541–1,935 | 0.0% | 20.5% |
+| Batch | 셀 수 | 평균    | 중앙값  | 범위      | 500 미만 | B1 수명 범위 밖 |
+| ----- | ----- | ------- | ------- | --------- | -------- | --------------- |
+| 1     | 46    | 844.7   | 858.5   | 534–1,227 | 0.0%     | —               |
+| 2     | 39    | 565.7   | 472.0   | 392–1,186 | 71.8%    | 76.9%           |
+| 3     | 44    | 1,059.7 | 1,005.5 | 541–1,935 | 0.0%     | 20.5%           |
 
 핵심 발견: Batch 2는 단수명 방향, Batch 3는 장수명 방향으로 분포가 이동합니다. Batch 1 내부 검증 점수를 최종 Test 성능으로 간주하기 어렵습니다.
 
@@ -108,13 +108,13 @@ Batch 2의 초기 용량은 51.3%, 초기 기울기는 59.0%가 Batch 1 입력 �
 
 ### 피처 엔지니어링 전략
 
-| Feature Set | 입력 피처 | 검증 질문 |
-| --- | --- | --- |
-| M0 | 학습 Target 중앙값 | 단순 기준보다 나은가? |
-| M1 | `log10_dq_var` | ΔQ 단독 예측력은 어느 정도인가? |
-| M2 | M1 + 최대 C-rate·전환 SOC | 충전 조건이 추가 정보를 제공하는가? |
-| M3 | M2 + 초기 용량 중앙값·기울기 | 용량 수준·추세가 기여하는가? |
-| M4 | M3 + 온도·IR 중앙값 | 상태 정보가 추가 이득을 주는가? |
+| Feature Set | 입력 피처                    | 검증 질문                           |
+| ----------- | ---------------------------- | ----------------------------------- |
+| M0          | 학습 Target 중앙값           | 단순 기준보다 나은가?               |
+| M1          | `log10_dq_var`               | ΔQ 단독 예측력은 어느 정도인가?     |
+| M2          | M1 + 최대 C-rate·전환 SOC    | 충전 조건이 추가 정보를 제공하는가? |
+| M3          | M2 + 초기 용량 중앙값·기울기 | 용량 수준·추세가 기여하는가?        |
+| M4          | M3 + 온도·IR 중앙값          | 상태 정보가 추가 이득을 주는가?     |
 
 초기 용량은 Cycle 2–6 중앙값, 기울기는 Cycle 10–100의 Theil–Sen 추정치입니다. ΔQ 분산은 ddof=1을 사용합니다. 공통 전압 구간을 확보하지 못하거나 곡선 품질 기준을 통과하지 못하면 ΔQ를 결측으로 처리합니다. 분석 129셀은 모두 ΔQ 품질 기준을 통과했습니다.
 
@@ -133,17 +133,17 @@ Batch 1은 고정된 Train 36셀·Hold-out 10셀로 분리합니다. 셀은 중�
 
 ## 성능 결과
 
-| Index | Value | Unit | 정의 |
-| --- | --- | --- | --- |
-| Train (Batch 1 CV) | 8.134 | % | Group CV fold mean; Train36 |
-| Valid (Batch 1 Hold-out) | 6.271 | % | Hold-out10; one evaluation |
-| Test (Batch 2) | 59.537 | % | Final refit on Batch1 46; Test39 |
-| Gap (Train-Valid) | -1.864 | %p | Valid - Train; positive: possible overfitting |
-| Gap (Valid-Test) | 53.267 | %p | Batch2 - Valid; positive: generalization degradation |
-| Gap (Target-Test), Batch2 | 50.437 | %p | Batch2 - 9.1%; paper reference |
-| Test (Batch 3) | 14.941 | % | Same final model; additional Test44 |
-| Gap (Batch2-Batch3) | -44.596 | %p | Batch3 - Batch2; positive: Batch3 has higher error |
-| Gap (Target-Test), Batch3 | 5.841 | %p | Batch3 - 9.1%; paper reference |
+| Index                     | Value   | Unit | 정의                                                 |
+| ------------------------- | ------- | ---- | ---------------------------------------------------- |
+| Train (Batch 1 CV)        | 8.134   | %    | Group CV fold mean; Train36                          |
+| Valid (Batch 1 Hold-out)  | 6.271   | %    | Hold-out10; one evaluation                           |
+| Test (Batch 2)            | 59.537  | %    | Final refit on Batch1 46; Test39                     |
+| Gap (Train-Valid)         | -1.864  | %p   | Valid - Train; positive: possible overfitting        |
+| Gap (Valid-Test)          | 53.267  | %p   | Batch2 - Valid; positive: generalization degradation |
+| Gap (Target-Test), Batch2 | 50.437  | %p   | Batch2 - 9.1%; paper reference                       |
+| Test (Batch 3)            | 14.941  | %    | Same final model; additional Test44                  |
+| Gap (Batch2-Batch3)       | -44.596 | %p   | Batch3 - Batch2; positive: Batch3 has higher error   |
+| Gap (Target-Test), Batch3 | 5.841   | %p   | Batch3 - 9.1%; paper reference                       |
 
 MAPE는 %, Gap은 %p입니다. Gap(Train-Valid)=Valid−Train, Gap(Valid-Test)=Test−Valid, Gap(Target-Test)=Test−9.1입니다. 양수는 오차 악화를 의미합니다. Train은 Group CV fold 평균이며 pooled OOF는 보조 지표로 별도 저장합니다. 과제 자료의 원논문 기준 9.1%는 동일한 배치 구성·검증 절차를 재현한 수치로 해석하지 않습니다.
 
@@ -153,13 +153,13 @@ Batch 2 MAPE는 59.54%, Batch 3는 14.94%로 외부 배치에서 목표 9.1%를 
 
 Batch 2 평균 부호 오차는 +270.9사이클, 과대 예측 비율은 94.9%입니다. 단수명 셀을 길게 예측하는 편향이 큽니다.
 
-| 셀 | 실제 수명 | 예측 수명 | APE (%) | B1 범위 밖 입력 |
-| --- | --- | --- | --- | --- |
-| b2c6 | 393.000 | 904.800 | 130.229 | switch_soc;qd_slope_10_100 |
-| b2c15 | 396.000 | 797.912 | 101.493 | switch_soc;qd_slope_10_100 |
-| b2c29 | 452.000 | 877.043 | 94.036 | qd_initial_median;qd_slope_10_100 |
-| b2c31 | 425.000 | 821.916 | 93.392 | qd_initial_median;qd_slope_10_100 |
-| b2c11 | 449.000 | 850.145 | 89.342 | qd_initial_median;qd_slope_10_100 |
+| 셀    | 실제 수명 | 예측 수명 | APE (%) | B1 범위 밖 입력                   |
+| ----- | --------- | --------- | ------- | --------------------------------- |
+| b2c6  | 393.000   | 904.800   | 130.229 | switch_soc;qd_slope_10_100        |
+| b2c15 | 396.000   | 797.912   | 101.493 | switch_soc;qd_slope_10_100        |
+| b2c29 | 452.000   | 877.043   | 94.036  | qd_initial_median;qd_slope_10_100 |
+| b2c31 | 425.000   | 821.916   | 93.392  | qd_initial_median;qd_slope_10_100 |
+| b2c11 | 449.000   | 850.145   | 89.342  | qd_initial_median;qd_slope_10_100 |
 
 오차가 큰 셀에서 초기 용량·기울기 또는 전환 SOC의 입력 범위 이탈이 관찰됩니다. 초기 용량·기울기는 Batch 1에서 수명 설명에 기여하지만 배치가 달라지면 관계가 유지되지 않을 수 있습니다. 이는 분포 이동과 모델 계수에 관한 원인 가설이며 측정 장비·제조 조건의 인과적 효과를 확정한 결과는 아닙니다.
 
@@ -191,7 +191,6 @@ Batch 2·3는 설계 EDA와 분석에 이미 사용된 배치입니다. 본 결�
 
 - Severson et al. (2019). Data-driven prediction of battery cycle life before capacity degradation. Nature Energy, 4, 383–391.
 - DS-MINI 설계서 · 울산캠퍼스 4반 정예지.
-- Mini Project · 데이터분석 미니 프로젝트 과제 자료.
 
 ## 팀 구성
 

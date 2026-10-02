@@ -1,0 +1,6 @@
+index,value,unit,note
+Gap (Train-Valid),-1.8635782247946908,%p,Valid - Train; positive: possible overfitting
+Gap (Valid-Test),53.26676427274071,%p,Batch2 - Valid; positive: generalization degradation
+"Gap (Target-Test), Batch2",50.437448880154676,%p,Batch2 - 9.1%; paper reference
+Gap (Batch2-Batch3),-44.596114929357874,%p,Batch3 - Batch2; positive: Batch3 has higher error
+"Gap (Target-Test), Batch3",5.841333950796804,%p,Batch3 - 9.1%; paper reference
